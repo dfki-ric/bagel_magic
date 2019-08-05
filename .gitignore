@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*~
+**/*/.idea
+.idea
+lastState.yml
+status.yml

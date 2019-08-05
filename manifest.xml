@@ -1,0 +1,10 @@
+<package>
+    <description brief="bagel_magic">
+      A wizard GUI to manage Bagel models and MARS configurations.
+    </description>
+    <author>Malte Langosz/malte.langosz@dfki.de</author>
+    <depend package="simulation/mars/app" />
+    <depend package="bagel/xrock_gui_model" />
+    <depend package="tools/xrock_bagel_tools" />
+    <tags>needs_opt</tags>
+</package>
