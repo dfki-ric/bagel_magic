@@ -294,8 +294,8 @@ def execute(cmd):
     #print "call: " + " ".join(cmd)
     #process = subprocess.Popen(" ".join(cmd), shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     command = " ".join(cmd) + " &"
-    if "MCDYLD_LIBRARY_PATH" in os.environ:
-        command = "DYLD_LIBRARY_PATH="+os.environ["MCDYLD_LIBRARY_PATH"]+" "+command
+    if "MYLD_LIBRARY_PATH" in os.environ:
+        command = "DYLD_LIBRARY_PATH="+os.environ["MYLD_LIBRARY_PATH"]+" "+command
     os.system(command)
 
 def execute2(cmd):
@@ -306,8 +306,8 @@ def execute2(cmd):
 
     #print "call: " + " ".join(cmd)
     command = " ".join(cmd)
-    if "MCDYLD_LIBRARY_PATH" in os.environ:
-        command = "DYLD_LIBRARY_PATH="+os.environ["MCDYLD_LIBRARY_PATH"]+" "+command
+    if "MYLD_LIBRARY_PATH" in os.environ:
+        command = "DYLD_LIBRARY_PATH="+os.environ["MYLD_LIBRARY_PATH"]+" "+command
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     #os.system(" ".join(cmd)  + " &")
 
@@ -421,7 +421,7 @@ def startBagel():
     global modelsCombo, versionsCombo
     model = str(modelsCombo.currentText())
     version = str(versionsCombo.currentText())
-    execute(["bash drock_gui", "model="+model, "version="+version, "domain=software", "edition=software"])
+    execute(["bash xrock_gui", "model="+model, "version="+version, "domain=software", "edition=software"])
 
 
 def update():
